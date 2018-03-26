@@ -22,7 +22,7 @@ bot.on('message', message => {
         console.log("Commade Spell effectuée");
     }
 
-    if (message.content === prefix + "kick"){
+    if (command === "kick") {
         let modRole = message.guild.roles.find("name", "Test");
         if(!message.member.roles.has(modRole.id)) {
             return message.reply("Tu n'as pas les permissions pour cette commande.").catch(console.error);
